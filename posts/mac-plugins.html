@@ -1,0 +1,739 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>How to run piracy apps & plugins on Mac OS</title>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+
+    <meta name="description" content="How to run piracy apps & plugins on Mac OS">
+    <meta name="keywords" content="How to run piracy apps & plugins on Mac OS">
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://monter.is">
+    <meta property="og:title" content="How to run piracy apps & plugins on Mac OS">
+    <meta property="og:description" content="How to run piracy apps & plugins on Mac OS">
+
+    <style>
+        /* webkit printing magic: print all background colors */
+        html {
+            -webkit-print-color-adjust: exact;
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        @media only screen {
+            body {
+                margin: 2em auto;
+                max-width: 640px;
+                color: rgb(55, 53, 47);
+            }
+        }
+
+        body {
+            font-size: 20px;
+            line-height: 1.5;
+        }
+
+        a,
+        a.visited {
+            color: inherit;
+            text-decoration: underline;
+        }
+
+        .pdf-relative-link-path {
+            font-size: 80%;
+            color: #444;
+        }
+
+        h1,
+        h2,
+        h3 {
+            letter-spacing: -0.01em;
+            line-height: 1.2;
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 0.75em;
+        }
+
+        h1 {
+            font-size: 1.875rem;
+            margin-top: 1.875rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            margin-top: 1.25rem;
+        }
+
+        .source {
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            padding: 1.5em;
+            word-break: break-all;
+        }
+
+        .callout {
+            border-radius: 3px;
+            padding: 1rem 1rem 1rem 1.5rem;
+        }
+
+        figure {
+            margin: 1.25em 0;
+            page-break-inside: avoid;
+        }
+
+        figcaption {
+            opacity: 0.5;
+            font-size: 85%;
+            margin-top: 0.5em;
+        }
+
+        mark {
+            background-color: transparent;
+        }
+
+        .indented {
+            padding-left: 1.5em;
+        }
+
+        hr {
+            background: transparent;
+            display: block;
+            width: 100%;
+            height: 1px;
+            visibility: visible;
+            border: none;
+            border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        @media only print {
+            img {
+                max-height: 100vh;
+                object-fit: contain;
+            }
+        }
+
+        @page {
+            margin: 1in;
+        }
+
+        .collection-content {
+            font-size: 0.875rem;
+        }
+
+        .column-list {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .column {
+            padding: 0 1em;
+        }
+
+        .column:first-child {
+            padding-left: 0;
+        }
+
+        .column:last-child {
+            padding-right: 0;
+        }
+
+        .table_of_contents-item {
+            display: block;
+            font-size: 0.875rem;
+            line-height: 1.3;
+            padding: 0.125rem;
+        }
+
+        .table_of_contents-indent-1 {
+            margin-left: 1.5rem;
+        }
+
+        .table_of_contents-indent-2 {
+            margin-left: 3rem;
+        }
+
+        .table_of_contents-indent-3 {
+            margin-left: 4.5rem;
+        }
+
+        .table_of_contents-link {
+            text-decoration: none;
+            opacity: 0.7;
+            border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid rgba(55, 53, 47, 0.09);
+            border-collapse: collapse;
+        }
+
+        table {
+            border-left: none;
+            border-right: none;
+        }
+
+        th,
+        td {
+            font-weight: normal;
+            padding: 0.25em 0.5em;
+            line-height: 1.5;
+            min-height: 1.5em;
+            text-align: left;
+        }
+
+        th {
+            color: rgba(55, 53, 47, 0.6);
+        }
+
+        ol,
+        ul {
+            margin: 0;
+            margin-block-start: 0.6em;
+            margin-block-end: 0.6em;
+        }
+
+        li>ol:first-child,
+        li>ul:first-child {
+            margin-block-start: 0.6em;
+        }
+
+        ul>li {
+            list-style: disc;
+        }
+
+        ul.to-do-list {
+            text-indent: -1.7em;
+        }
+
+        ul.to-do-list>li {
+            list-style: none;
+        }
+
+        .to-do-children-checked {
+            text-decoration: line-through;
+            opacity: 0.375;
+        }
+
+        ul.toggle>li {
+            list-style: none;
+        }
+
+        ul {
+            padding-inline-start: 1.7em;
+        }
+
+        ul>li {
+            padding-left: 0.1em;
+        }
+
+        ol {
+            padding-inline-start: 1.6em;
+        }
+
+        ol>li {
+            padding-left: 0.2em;
+        }
+
+        .mono ol {
+            padding-inline-start: 2em;
+        }
+
+        .mono ol>li {
+            text-indent: -0.4em;
+        }
+
+        .toggle {
+            padding-inline-start: 0em;
+            list-style-type: none;
+        }
+
+        /* Indent toggle children */
+        .toggle>li>details {
+            padding-left: 1.7em;
+        }
+
+        .toggle>li>details>summary {
+            margin-left: -1.1em;
+        }
+
+        .selected-value {
+            display: inline-block;
+            padding: 0 0.5em;
+            background: rgba(206, 205, 202, 0.5);
+            border-radius: 3px;
+            margin-right: 0.5em;
+            margin-top: 0.3em;
+            margin-bottom: 0.3em;
+            white-space: nowrap;
+        }
+
+        .collection-title {
+            display: inline-block;
+            margin-right: 1em;
+        }
+
+        time {
+            opacity: 0.5;
+        }
+
+        .icon {
+            display: inline-block;
+            max-width: 1.2em;
+            max-height: 1.2em;
+            text-decoration: none;
+            vertical-align: text-bottom;
+            margin-right: 0.5em;
+        }
+
+        img.icon {
+            border-radius: 3px;
+        }
+
+        .user-icon {
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 100%;
+            margin-right: 0.5rem;
+        }
+
+        .user-icon-inner {
+            font-size: 0.8em;
+        }
+
+        .text-icon {
+            border: 1px solid #000;
+            text-align: center;
+        }
+
+        .page-cover-image {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 30vh;
+            margin-bottom: 40px;
+        }
+
+        .page-header-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-header-icon-with-cover {
+            margin-top: -0.72em;
+            margin-left: 0.07em;
+        }
+
+        .page-header-icon img {
+            border-radius: 3px;
+        }
+
+        .link-to-page {
+            margin: 1em 0;
+            padding: 0;
+            border: none;
+            font-weight: 500;
+        }
+
+        p>.user {
+            opacity: 0.5;
+        }
+
+        td>.user,
+        td>time {
+            white-space: nowrap;
+        }
+
+        input[type="checkbox"] {
+            transform: scale(1.5);
+            margin-right: 0.6em;
+            vertical-align: middle;
+        }
+
+        p {
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .image {
+            border: none;
+            margin: 1.5em 0;
+            padding: 0;
+            border-radius: 0;
+            text-align: center;
+        }
+
+        .code,
+        code {
+            background: rgba(135, 131, 120, 0.15);
+            border-radius: 3px;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-size: 85%;
+            tab-size: 2;
+        }
+
+        code {
+            color: #eb5757;
+        }
+
+        .code {
+            padding: 1em 1em;
+        }
+
+        .code>code {
+            background: none;
+            padding: 0;
+            font-size: 100%;
+            color: inherit;
+        }
+
+        blockquote {
+            font-size: 1.25em;
+            margin: 1em 0;
+            padding-left: 1em;
+            border-left: 3px solid rgb(55, 53, 47);
+        }
+
+        .bookmark-href {
+            font-size: 0.75em;
+            opacity: 0.5;
+        }
+
+        .sans {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+            font-display: swap;
+        }
+
+        .code {
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+            font-display: swap;
+        }
+
+        .serif {
+            font-family: Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif;
+            font-display: swap;
+        }
+
+        .mono {
+            font-family: Nitti, 'Microsoft YaHei', '微软雅黑', monospace;
+            font-display: swap;
+        }
+
+        .highlight-default {}
+
+        .highlight-gray {
+            color: rgb(155, 154, 151);
+        }
+
+        .highlight-brown {
+            color: rgb(100, 71, 58);
+        }
+
+        .highlight-orange {
+            color: rgb(217, 115, 13);
+        }
+
+        .highlight-yellow {
+            color: rgb(223, 171, 1);
+        }
+
+        .highlight-teal {
+            color: rgb(15, 123, 108);
+        }
+
+        .highlight-blue {
+            color: rgb(11, 110, 153);
+        }
+
+        .highlight-purple {
+            color: rgb(105, 64, 165);
+        }
+
+        .highlight-pink {
+            color: rgb(173, 26, 114);
+        }
+
+        .highlight-red {
+            color: rgb(224, 62, 62);
+        }
+
+        .highlight-gray_background {
+            background: rgb(235, 236, 237);
+        }
+
+        .highlight-brown_background {
+            background: rgb(233, 229, 227);
+        }
+
+        .highlight-orange_background {
+            background: rgb(250, 235, 221);
+        }
+
+        .highlight-yellow_background {
+            background: rgb(251, 243, 219);
+        }
+
+        .highlight-teal_background {
+            background: rgb(221, 237, 234);
+        }
+
+        .highlight-blue_background {
+            background: rgb(221, 235, 241);
+        }
+
+        .highlight-purple_background {
+            background: rgb(234, 228, 242);
+        }
+
+        .highlight-pink_background {
+            background: rgb(244, 223, 235);
+        }
+
+        .highlight-red_background {
+            background: rgb(251, 228, 228);
+        }
+
+        .block-color-default {
+            color: inherit;
+            fill: inherit;
+        }
+
+        .block-color-gray {
+            color: rgba(55, 53, 47, 0.6);
+            fill: rgba(55, 53, 47, 0.6);
+        }
+
+        .block-color-brown {
+            color: rgb(100, 71, 58);
+            fill: rgb(100, 71, 58);
+        }
+
+        .block-color-orange {
+            color: rgb(217, 115, 13);
+            fill: rgb(217, 115, 13);
+        }
+
+        .block-color-yellow {
+            color: rgb(223, 171, 1);
+            fill: rgb(223, 171, 1);
+        }
+
+        .block-color-teal {
+            color: rgb(15, 123, 108);
+            fill: rgb(15, 123, 108);
+        }
+
+        .block-color-blue {
+            color: rgb(11, 110, 153);
+            fill: rgb(11, 110, 153);
+        }
+
+        .block-color-purple {
+            color: rgb(105, 64, 165);
+            fill: rgb(105, 64, 165);
+        }
+
+        .block-color-pink {
+            color: rgb(173, 26, 114);
+            fill: rgb(173, 26, 114);
+        }
+
+        .block-color-red {
+            color: rgb(224, 62, 62);
+            fill: rgb(224, 62, 62);
+        }
+
+        .block-color-gray_background {
+            background: rgb(245, 245, 247);
+        }
+
+        .block-color-brown_background {
+            background: rgb(233, 229, 227);
+        }
+
+        .block-color-orange_background {
+            background: rgb(250, 235, 221);
+        }
+
+        .block-color-yellow_background {
+            background: rgb(251, 243, 219);
+        }
+
+        .block-color-teal_background {
+            background: rgb(221, 237, 234);
+        }
+
+        .block-color-blue_background {
+            background: rgb(221, 235, 241);
+        }
+
+        .block-color-purple_background {
+            background: rgb(234, 228, 242);
+        }
+
+        .block-color-pink_background {
+            background: rgb(244, 223, 235);
+        }
+
+        .block-color-red_background {
+            background: rgb(251, 228, 228);
+        }
+
+        .checkbox {
+            display: inline-flex;
+            vertical-align: text-bottom;
+            width: 16;
+            height: 16;
+            background-size: 16px;
+            margin-left: 2px;
+            margin-right: 5px;
+        }
+
+        .checkbox-on {
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+        }
+
+        .checkbox-off {
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+        }
+
+        .video-youtube {
+            margin-top: 10px;
+        }
+
+        .link-center {
+            text-align: center;
+        }
+
+        .myButton {
+            box-shadow: 0px 1px 0px 0px #f0f7fa;
+            background: linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+            background-color: #33bdef;
+            border-radius: 6px;
+            border: 1px solid #057fd0;
+            display: inline-block;
+            cursor: pointer;
+            color: #ffffff;
+            font-family: Arial;
+            font-size: 15px;
+            font-weight: bold;
+            padding: 6px 24px;
+            text-decoration: none;
+            text-shadow: 0px -1px 0px #5b6178;
+        }
+
+        .myButton:hover {
+            background: linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+            background-color: #019ad2;
+        }
+
+        .myButton:active {
+            position: relative;
+            top: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <article id="394fbe2e-a61f-4d5b-a78a-583617b33ad9" class="page sans">
+        <figure><img src="https://i.imgur.com/xntx3FJ.png">
+        </figure>
+        <header>
+            <h1 class="page-title">How to run piracy apps & plugins on Mac OS</h1>
+        </header>
+        <div class="page-body">
+            <p>Apple controls its entire ecosystem. On the Mac, even if you don't download an app from the AppStore,
+                but from a developer's site. To run th app on Macs, the developer must get a digital
+                signature from Apple, otherwise it will be impossible to launch the app in the usual way.</p>
+            <p>Every time you launch a new app on your Mac, <a
+                    href="https://support.apple.com/en-us/HT202491">Gatekeeper</a> checks to see if it is signed with a
+                valid
+                signature. If the application is signed with a valid signature, it can be started. If this is not the
+                case, you will see a warning message and your Mac will not allow you to launch the app.</p>
+            <p>To able to run piracy apps, you need to disable Gatekeeper. For it open Termianl app, then copy & paste a
+                command below, then tap Enter</p>
+            <p class="code">sudo spctl --master-disable</p>
+            <p>But with each new version of the Mac OS, disabling Gatekeeper helps less and less. But there is a way out
+                — you can disable protection for a specific apps and plugins by entering the following command in the
+                terminal:</p>
+            <p class="code">sudo xattr -rd com.apple.quarantine /Applications/LockedApp.app</p>
+            <h3>Example</h3>
+            <p>Now we will show you a detailed example of how to use the above commands. You have downloaded a dmg
+                container, open it. You probably know that plugins for AE on Mac have the extension *.plugin, and
+                apps have *.app. So in a dmg,  a plugin/an app can be top, or in a
+                folder/folders.</p>
+            <img src="https://i.imgur.com/beg3iA1.png">
+            <p>In this example, plugins are at folders, thats why we need to extract a folder or from the dmg to any location. In my case it's downloads. If there is just a plugin or an app, jut extract it.</p>
+            <img src="https://i.imgur.com/uN7z3VI.png">
+            <p>Then find and open Terminal app and copy following command:</p>
+            <p class="code">sudo xattr -rd com.apple.quarantine</p>
+            <ul>
+                <li>then tap space key</li>
+                <li>drag & drop extrated plugin</li>
+                <li>tap Enter key</li>
+            </ul>
+            <p>It asks password and enter it. Now you're able to run dragged plugin.</p>
+            <figure><video type="video/mp4" width="640px" autoplay loop muted playsinline>
+                <source src="terminal-screencast.mp4" type="video/mp4"></video></figure>
+            <p>and you have to do the same with each cracked plugins or apps if there is more than one.</p>
+            <p>In this case, ReVision has a lot of plugins at subfolders and you need to do the same with them.</p>
+            <img src="https://i.imgur.com/sHGikcr.png">
+            <img src="https://i.imgur.com/ivd7NY9.png">
+            <p>If in your case there is just one or two, you'll do the same with them one by one</p>
+            <p>After you can put plugins into after effects plugins folder and they will run without any problems</p>
+            <div style="text-align: center; margin-top: 100px;"><a href="http://monter.is/?utm_source=mac-guide"
+                    class="myButton">Download Premium Plugins and Scripts for After Effects for Free</a></div>
+        </div>
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript">
+            (function (m, e, t, r, i, k, a) {
+                m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+                m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+            })
+                (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+            ym(56987398, "init", {
+                clickmap: true,
+                trackLinks: true,
+                accurateTrackBounce: true,
+                webvisor: true
+            });
+        </script>
+        <noscript>
+            <div><img src="https://mc.yandex.ru/watch/56987398" style="position:absolute; left:-9999px;" alt="" /></div>
+        </noscript>
+        <!-- /Yandex.Metrika counter -->
+    </article>
+</body>
+
+</html>
